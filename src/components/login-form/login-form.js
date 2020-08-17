@@ -58,7 +58,7 @@ function LoginForm({set_login_state}) {
 	}
 
 	const formClasses = [];
-	if ( formState == FORM_LOADING ) {
+	if ( formState === FORM_LOADING ) {
 		formClasses.push('loading');
 	}
 	if ( errorMessage !== "" ) {
@@ -87,7 +87,7 @@ function LoginForm({set_login_state}) {
 			  	<div className="field">
 			    	<label>Password</label>
 			    	<input type="text" placeholder=""  value={password} onChange={(e) => setPassword(e.target.value)} />
-			    	<a href="#" onClick={insertDefaultData} >Insert evgeniy-dev's password</a>
+			    	<a href="/" onClick={insertDefaultData} >Insert evgeniy-dev's password</a>
 			  	</div>
 			  	<input type="submit" value="Login" className="ui button" disabled={ domain === "" || password === "" } />
 			</form>

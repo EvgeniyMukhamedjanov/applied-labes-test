@@ -12,8 +12,6 @@ function SectionForm() {
 	const [sectionName, setSectionName] = useState('');
 	const [sectionValue, setSectionValue] = useState('');
 	const [formState, setFormState] = useState(FORM_READY);
-	const [errorMessage, setErrorMessage] = useState('');
-	const [successMessage, setSuccessMessage] = useState('');
 	const [formMessage, setFormMessage] = useState({ error: false, message: "" });
 
 	const handleSubmit = (e) => {
@@ -46,7 +44,7 @@ function SectionForm() {
 	}
 
 	const formClasses = [];
-	if ( formState == FORM_LOADING ) {
+	if ( formState === FORM_LOADING ) {
 		formClasses.push('loading');
 	}
 	if ( formMessage.message !== "" ) {
@@ -71,7 +69,7 @@ function SectionForm() {
 			  	<div className="field">
 			    	<label>Section Value</label>
 			    	<textarea placeholder="Some liquid code here" value={sectionValue} onChange={(e) => { setSectionValue(e.target.value) }}></textarea>
-			    	<a href="#" onClick={(e) => {e.preventDefault(); setSectionValue(sectionData.defaultTemplate) } } >Insert Default Template</a>
+			    	<a href="/" onClick={(e) => {e.preventDefault(); setSectionValue(sectionData.defaultTemplate) } } >Insert Default Template</a>
 			  	</div>
 			  	<input type="submit" value="Create" className="ui button" disabled={ sectionName === '' } />
 			</form>

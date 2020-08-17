@@ -26,7 +26,7 @@ function App({isLoggedIn}) {
       )}
 
 		  <div className="ui center aligned basic segment">
-		    Powered by <a href="https://appliedlabs.io/" target="_blank">Appliedlabs.io</a>
+		    Powered by <a href="https://appliedlabs.io/" target="_blank" rel="noopener noreferrer">Appliedlabs.io</a>
 	    </div>
   	</div>
   );
