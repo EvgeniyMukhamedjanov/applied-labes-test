@@ -76,9 +76,9 @@ function LoginForm({set_login_state}) {
                     <label>Domain</label>
                     <div className="ui right labeled input">
                         <div className="ui label">
-                            http://
+                            https://
                         </div>
-                        <input type="text" placeholder="" value={domain} onChange={handleDomainChange}/>
+                        <input type="text" placeholder="" style={{width: "1px"}} value={domain} onChange={handleDomainChange}/>
                         <div className="ui label">
                             .myshopify.com
                         </div>
