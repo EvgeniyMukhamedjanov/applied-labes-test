@@ -1,4 +1,4 @@
-const defaultTemplate = 
+const defaultTemplate =
 `<div class="page-width applied-labs-section">
   {% if section.settings.text-box != blank %}
     <div class="section-header text-center">
@@ -21,33 +21,33 @@ const defaultTemplate =
 </div>`;
 
 const sectionSchema = {
-  "name": "More Products",
-  "max_blocks": 3,
-  "settings": [
-    {
-          "id": "text-box",
-          "type": "text",
-          "label": "Title",
-    }
-  ],
-  "blocks": [
-    {
-      "type": "select",
-      "name": "Product",
-      "settings": [
+    "name": "More Products",
+    "max_blocks": 3,
+    "settings": [
         {
-          "type": "product",
-           "id": "feature_product",
-           "label": "Feature product"
+            "id": "text-box",
+            "type": "text",
+            "label": "Title",
         }
-      ]
-    }
-  ]
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "feature_product",
+                    "label": "Feature product"
+                }
+            ]
+        }
+    ]
 }
 
 const sectionData = {
-	defaultTemplate,
-  sectionSchema
+    defaultTemplate,
+    sectionSchema
 }
 
 export default sectionData;
