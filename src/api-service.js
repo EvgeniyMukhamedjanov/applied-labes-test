@@ -9,7 +9,7 @@ export default class ApiService {
     if (authDomain === undefined) {
       authDomain = getAuthDomain();
     }
-    return `https://${authDomain}.myshopify.com/${this._apiBase}${url}`;
+    return `https://cors-anywhere.herokuapp.com/https://${authDomain}.myshopify.com/${this._apiBase}${url}`;
   }
 
   createSectionForProductTemplate = async (sectionName, sectionValue) => {
